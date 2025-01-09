@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pinaSwap</title>
+    <link rel="styleSheet" type="text/css" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <button class="connectBtn">connect to MetaMask</button>
+    </header>
+    <div style="display: flex;padding-top: 48px;justify-content: center; flex-direction: column; align-items: center;"> 
+        <div class="content">
+            <div class="swap">
+                <div style="font-size: 12px;">From</div>
+                <div class="child">
+                    <button class="intro" id="from-intro">
+                        <img id="fromTokenImg" style="object-fit: contain; border-radius: 50%; margin-right: 8px;">
+                        <div class="text" id="fromTokenText"></button>
+                        </button>
+                    <input class="input" type="text" placeholder="0.00" id="fromInput"></input>
+                </div>
+            </div>
+            <div>-------------</div>
+            <div class="swap">
+                <div style="font-size: 12px;">To</div>
+                <div class="child">
+                    <button class="intro" id="to-intro">
+                        <img id="toTokenImg" style="object-fit: contain; border-radius: 50%; margin-right: 8px;">
+                        <div class="text" id="toTokenText"></button>
+                        </button>
+                    <input class="input" type="text" placeholder="0.00" id="toInput"></input>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="detail-box">
+                <div style="display: flex;">
+                    <div>gas price</div>
+                    <div class="gas-estimate">000</div>
+                </div>
+            </div>
+        </div>
+        <button class="swap-btn" id="swap-btn" >
+            SWAP
+        </button>
+    </div>
+
+    <dialog id="token_dialog">
+        <form method="dialog">
+            <div class="dialog-wrap">
+                <div class="dialog-title">
+                    <div class="dialog-info">1</div>
+                    <button id="cancel">cancel</button>
+                </div>
+                <div class="content-list"></div>
+            </div>
+        </form>
+    </dialog>
+
+    <script type="module" src="./index.js" ></script>
+    <!-- <script src="https://cdn.ethers.io/lib/ethers-5.6.umd.min.js"></script> -->
+</body>
+</html>

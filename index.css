@@ -1,0 +1,178 @@
+:root{
+    --background:#e5eaf5;
+    --primary:#d0bdf4;
+    --secondary:#8458B3;
+    --shadows-focus: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, .6);
+    --shadows-inset: inset 0px 2px 2px -1px rgba(74, 74, 104, .1);
+    --button:#a0d2eb;
+    --color-text:#494D5F;
+}
+
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+body{
+    font-family:'kanit', Arial, sans-serif;
+}
+
+.header{
+    display: flex;
+    border: 2px solid black;
+    height: 40px;
+    width: 100%;
+    justify-content: end;
+    padding-right: 8px;
+}
+
+.connectBtn{
+
+}
+
+.content{
+    width: 400px;
+    background-color:var(--background);
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;    
+    padding:24px;
+    gap:8px;
+    box-shadow: 0px 0px 0px 1px #7645d9, 0px 0px 0px 3px rgba(118, 69, 217, .6);;
+}
+
+.swap{
+    
+}
+
+.child{
+    display: flex;
+    margin-top:12px;
+    height: 60px;
+    border-radius: 24px;
+    background-color: var(--primary);
+    padding: 0 16px;
+    box-shadow: var(--shadows-inset);
+}
+
+.child:focus-within{
+    box-shadow: var(--shadows-focus);
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-family: "kanit";
+    font-weight: 600;
+    font-size:20px;
+    margin: 12px 0;
+    padding:0 12px;
+}
+
+.intro:hover{
+    border-radius: 24px;
+    background-color: var(--background);
+    cursor: pointer;
+}
+
+.text{
+   
+}
+
+.input{
+    background-color: transparent;
+    flex:1 1 auto;
+    border: 0;
+    text-align: right;
+    font-family: "kanit";
+    font-size: 24px;
+    width: 0;
+    color: var(--color-text);
+    font-weight: 600;
+    white-space: nowrap;       /* 强制单行显示 */
+    overflow: hidden;          /* 超出部分隐藏 */
+    text-overflow: ellipsis;   /* 用省略号表示溢出 */
+}
+
+.input:focus{
+    outline: none;
+}
+
+#token_dialog{
+    border: none;
+    background-color: var(--background);
+    z-index: 100;
+    border-radius: 24px;
+    padding: 12px 0 ;
+}
+
+.dialog-wrap{
+    width: 300px;
+}
+
+.dialog-title{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-list{
+    margin-top: 12px;
+    min-height: 300px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    overflow: auto;
+}
+
+.token-row{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color:var(--color-text);
+    padding: 8px 16px;
+}
+
+.token-row:hover{
+    background-color: var(--primary);
+}
+
+.detail-box{
+    width: 400px;
+    padding: 24px;
+    background-color: var(--background);
+    margin-top: 50px;
+    border-radius: 24px;
+    box-shadow: var(--shadows-focus);
+    display: flex;
+    justify-content: end;
+}
+
+.gas-estimate{
+    margin-left: 8px;
+}
+
+.swap-btn{
+    width: 400px;
+    padding: 24px;
+    background-color: var(--background);
+    margin-top: 50px;
+    border-radius: 24px;
+    box-shadow: var(--shadows-focus);
+    display: flex;
+    justify-content: center;
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.swap-btn:hover{
+    background-color: var(--primary);
+}
